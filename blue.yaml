@@ -5,11 +5,9 @@ metadata:
   labels:
     app: blue
 spec:
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: blue
+  selector:
+    matchLabels:
+      app: blue
     spec:
       containers:
         - name: blue
