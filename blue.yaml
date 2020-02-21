@@ -15,4 +15,4 @@ spec:
         - name: blue
           image: muzammilkazmi86/greenblue
           ports:
-            - containerPort: 8000
+            - containerPort: 8080
