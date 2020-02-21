@@ -36,7 +36,7 @@ pipeline {
 		    sh '''
 			eksctl create cluster \
 			  --version 1.14 \
-			  --region us-west-2 \
+			  --region us-east-2 \
 			  --node-type t3.medium \
 			  --nodes 3 \
 			  --nodes-min 1 \
