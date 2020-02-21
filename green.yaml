@@ -2,12 +2,15 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: green
-  labels:
-    app: green
 spec:
   selector:
     matchLabels:
       app: green
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: green
     spec:
       containers:
         - name: green
