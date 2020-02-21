@@ -14,4 +14,3 @@ spec:
           image: muzammilkazmi86/greenblue
           ports:
             - containerPort: 8080
-© 2020 GitHub, Inc.
