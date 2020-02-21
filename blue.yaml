@@ -1,11 +1,11 @@
-apiVersion: v1
-kind: ReplicationController
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: blue
   labels:
     app: blue
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -15,4 +15,4 @@ spec:
         - name: blue
           image: muzammilkazmi86/greenblue
           ports:
-            - containerPort: 8080
+            - containerPort: 8000
