@@ -43,7 +43,7 @@ pipeline {
 			  --nodes-max 4 \
 			  --name my-demo-cluster \
 			  --ssh-access=true 
-			  --ssh-public-key=~/.ssh/eks_id_rsa.pub
+			  --ssh-public-key=capstone1 --region=us-east-2
 			  --kubeconfig=$HOME/kubeconfigs/demo-cluster-config.yaml
 		'''
 		}
