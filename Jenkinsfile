@@ -35,8 +35,14 @@ pipeline {
 		    sh 'echo "Create kubernetes cluster..."'
 		    sh '''
 			eksctl create cluster \
-			-f $HOME/eksctl_scripts/demo_cluster.yaml \
-			--kubeconfig=$HOME/kubeconfigs/demo-cluster-config.yaml
+			  --version 1.14 \
+			  --region us-west-2 \
+			  --node-type t3.medium \
+			  --nodes 3 \
+			  --nodes-min 1 \
+			  --nodes-max 4 \
+			  --name my-demo-cluster \
+			  --kubeconfig=$HOME/kubeconfigs/demo-cluster-config.yaml
 		'''
 		}
 	    }
