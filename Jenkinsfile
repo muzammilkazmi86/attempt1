@@ -42,7 +42,7 @@ pipeline {
 			  --nodes-min 1 \
 			  --nodes-max 4 \
 			  --name my-demo-cluster \
-			  --ssh-private-key=capstone1.pem --allow-ssh \
+			  --ssh-public-key=eksworkshop --allow-ssh \
 			  --kubeconfig=$HOME/kubeconfigs/demo-cluster-config.yaml
 		'''
 		}
