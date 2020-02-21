@@ -52,7 +52,7 @@ pipeline {
 	    steps {
 		withAWS(credentials: 'aws-kubectl', region: 'us-east-2') {
 		    sh 'echo "Configure kubectl..."'
-		    sh 'aws eks --region us-east-2 update-kubeconfig --name mcu' 
+		    sh 'aws eks --region us-east-2 update-kubeconfig --name my-demo-cluster' 
 		}
 	    }
         }
