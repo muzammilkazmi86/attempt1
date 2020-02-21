@@ -43,7 +43,7 @@ pipeline {
 			  --nodes-max 4 \
 			  --name my-demo-cluster \
 			  --ssh-public-key=eksworkshop \
-			  --ssh-access=true
+			  --ssh-access=true \
 			  --kubeconfig=$HOME/kubeconfigs/demo-cluster-config.yaml
 		'''
 		}
