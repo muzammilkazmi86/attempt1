@@ -37,7 +37,7 @@ pipeline {
 			eksctl create cluster \
 			  --version 1.14 \
 			  --region us-east-2 \
-			  --node-type t3.medium \
+			  --node-type t2.micro \
 			  --nodes 3 \
 			  --nodes-min 1 \
 			  --nodes-max 4 \
