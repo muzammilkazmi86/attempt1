@@ -35,17 +35,8 @@ pipeline {
 		    sh 'echo "Create kubernetes cluster..."'
 		    sh '''
 			eksctl create cluster \
-			--name mcu \
-			--version 1.14 \
-			--region us-east-2 \
-			--nodeImageId ami-080fbb09ee2d4d3fa \
-			--node-type t2.micro \
-			--keyname capstone \
-			--nodes 2 \
-			--nodes-min 1 \
-			--nodes-max 3 \
-			--managed
-		
+			-f $HOME/eksctl_scripts/demo_cluster.yaml \
+			--kubeconfig=$HOME/kubeconfigs/demo-cluster-config.yaml
 		'''
 		}
 	    }
