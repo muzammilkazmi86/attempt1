@@ -55,7 +55,7 @@ pipeline {
 	    steps {
 		withAWS(credentials: 'aws-kubectl', region: 'us-east-2') {
 		    sh 'echo "Deploy blue container..."'
-		    sh 'kubectl apply -f ./Blue/blue.yaml'
+		    sh 'kubectl apply -f blue.yaml'
 		}
 	    }
 	}
@@ -64,7 +64,7 @@ pipeline {
 	    steps {
 		withAWS(credentials: 'aws-kubectl', region: 'us-east-2') {
 		    sh 'echo "Deploy green container..."'
-		    sh 'kubectl apply -f ./Green/green.yaml'
+		    sh 'kubectl apply -f green.yaml'
 		}
 	    }
 	}
@@ -73,7 +73,7 @@ pipeline {
 	    steps {
 		withAWS(credentials: 'aws-kubectl', region: 'us-east-2') {
 		    sh 'echo "Create blue service..."'
-		    sh 'kubectl apply -f ./Blue/blue_service.yaml'
+		    sh 'kubectl apply -f blue_service.yaml'
 		}
 	    }
 	}
@@ -82,7 +82,7 @@ pipeline {
 	    steps {
 		withAWS(credentials: 'aws-kubectl', region: 'us-east-2') {
 		    sh 'echo "Update service to green..."'
-		    sh 'kubectl apply -f ./Green/green_service.yaml'
+		    sh 'kubectl apply -f green_service.yaml'
 		}
 	    }
 	}	
